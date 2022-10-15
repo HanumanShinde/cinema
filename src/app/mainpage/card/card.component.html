@@ -1,0 +1,25 @@
+<div class="container">
+    <h3>Recommended Movies</h3>
+    <div class="row">
+        <div class="col-md-3" *ngFor="let movie of this.movies" >
+            <div class="card">
+                <div class="conatainer">
+                    <div class="card-body">
+                        <div class="img">
+                            <img src="{{movie.poster}}" class="card-img-top" alt="">
+                        </div>
+                        <h5 class="card-title">{{movie.movie_name}}</h5>
+                        <p class="card-text">Theater ID {{movie.theater_id}}</p>
+                        <p class="card-text">{{movie.screen_name}}</p>
+                        <p class="card-text">{{movie.info}}</p>
+                    </div>
+                </div>
+                
+                <button class="btn btn-secondary" [routerLink]="['/view',movie.theater_id,movie.screen_id]" > Check Seats Avilable</button>
+                <button type="button" class="btn btn-success" routerLink="/book">Book Now</button>
+
+            </div>   
+        </div>
+    </div>
+
+</div>

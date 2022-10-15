@@ -1,0 +1,26 @@
+<div class="container">
+  <button [routerLink]="['/book','home']" type="button" class="btn btn-success"> < Back </button>
+    <div >
+      <label for="exampleInputEmail1" class="form-label" >Theater Name ID</label>
+      <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="ticket.theater_id">
+    </div>
+    <div >
+        <label for="exampleInputEmail1" class="form-label">Screen Name ID</label>
+        <input type="number" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="ticket.screen_id">
+      </div>
+    <div >
+      <label for="exampleInputPassword1" class="form-label">select your showTime</label>
+      <input type="datetime-local" class="form-control" id="exampleInputPassword1" [(ngModel)]="ticket.show_time">
+    </div>
+    <div >
+        <label for="exampleInputEmail1" class="form-label">Enter Seats</label>
+        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="ticket.total_seats">
+      </div>
+      <div >
+        <label for="exampleInputEmail1" class="form-label">Total Amount</label>
+        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        [(ngModel)]="ticket.total_amount">
+      </div>
+    <button class="btn btn-primary" (click)="add()">BooK Ticket</button>
+  
+</div>

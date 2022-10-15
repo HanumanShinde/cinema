@@ -1,0 +1,28 @@
+<div class="container">
+<button [routerLink]="['/view','home']" type="button" class="btn btn-success"> < Back </button>
+<br>
+<br>
+
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>screen_id</th>
+            <th>screen_name</th>
+            <th>movie_name</th>
+            <th>total_seats</th>
+            <th>booked_seats</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ticket of this.tickets;">
+            <td>{{ticket.screen_id}}</td>
+            <td>{{ticket.screen_name}}</td>
+            <td>{{ticket.movie_name}}</td>
+            <td>{{ticket.total_seats}}</td>
+            <td>{{ticket.booked_seats}}</td>    
+        </tr>
+    </tbody>
+</table>
+</div>
